@@ -33,16 +33,22 @@ var questions = [
     }
 ]
 
+function clickStart (){
+    startDiv.style.display = "none";
+    question1.style.display = "block";
+}
+function nextQuestion(){
+    
+}
+var startDiv = document.getElementById("start");
+var startButton = document.getElementById("start-button");
+var question1 = document.getElementById("questionOne");
+var question2 = document.getElementById("questionTwo");
+startButton.addEventListener("click", clickStart)
 
 
-
-
-
-// if answer is correct, add 2 points. else wrong, add 0 points //
-
-// add timer //
-
+// timer code
 // need to figure out how to show only one question at a time. once answered it will direct you to the next answer//
-
+// if answer is correct, add 2 points. else wrong, add 0 points //
 // track every correct answer and save it in local with name option
 
