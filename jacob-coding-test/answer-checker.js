@@ -1,38 +1,44 @@
 //Start
-var questions = [
-    {
-        question: "What is a variable?",
-        optionA: "Containers for storing data",
-        optionB: "Are placeholders",
-        optionC: "A number used in math",
-        correctOption: "optionA"
-    },
+var questions = ['whats is a variable?', 'What is not a variable type?', "What is an array?", "How does JavaScript interact with HTML?" ]
 
-    {
-        question: "What is not a variable type?",
-        optionA: "String",
-        optionB: "Line",
-        optionC: "Number",
-        correctOption: "optionB"
-    },
+var options = ['Containers for storing data','Are placeholders', 'A number used in math', 'String', 'Line', 'Number','Store multiple values in one variable', 'Same as a method', 'Used to create a list', "It doesn't interact", "It adds coloring to HTML", "Enhances the pages capabilities"]
 
-    {
-        question:"What is an array?",
-        optionA:"Store multiple values in one variable",
-        optionB: "Same as a method",
-        optionC:"Used to create a list",
-        correctOption: "optionA"
-    },
 
-    {
-        question:"How does JavaScript interact with HTML?",
-        optionA:"It doesn't interact",
-        optionB:"It adds coloring to HTML",
-        optionC:"Enhances the pages capabilities",
-        correctOption: "optionC"
-    }
-]
+// var oldquestions = [
+//     {
+//         question: "What is a variable?",
+//         optionA: "Containers for storing data",
+//         optionB: "Are placeholders",
+//         optionC: "A number used in math",
+//         correctOption: "optionA"
+//     },
 
+   
+//     {
+//         question: "What is not a variable type?",
+//         optionA: "String",
+//         optionB: "Line",
+//         optionC: "Number",
+//         correctOption: "optionB"
+//     },
+
+//     {
+//         question:"What is an array?",
+//         optionA:"Store multiple values in one variable",
+//         optionB: "Same as a method",
+//         optionC:"Used to create a list",
+//         correctOption: "optionA"
+//     },
+
+//     {
+//         question:"How does JavaScript interact with HTML?",
+//         optionA:"It doesn't interact",
+//         optionB:"It adds coloring to HTML",
+//         optionC:"Enhances the pages capabilities",
+//         correctOption: "optionC"
+//     }
+// ]
+// clicking start initiation
 function clickStart (){
     startDiv.style.display = "none";
     question1.style.display = "block";
@@ -40,6 +46,7 @@ function clickStart (){
 function nextQuestion(){
     
 }
+
 var startDiv = document.getElementById("start");
 var startButton = document.getElementById("start-button");
 var question1 = document.getElementById("questionOne");
