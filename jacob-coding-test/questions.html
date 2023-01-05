@@ -14,14 +14,10 @@
           <h1>Coding Quiz Challenge</h1>
           <p class="card-text">
             Try to answer the following code-related question within the time limit.
-                <br>
-            Keep in mind that incorrect answers will penalize your score/time             
-                <br>            
-            by ten seconds!
           </p>
           <button id="start-button">Start Quiz</button>
    </div>
-
+   <questionBody id='BodyQuestions'>
    <div id="questionOne">
     <h1>Question One: What is a variable? </h1>
         <button id="block-1" class="correct">Containers for storing data</button>
@@ -49,7 +45,7 @@
     <button id="block-11" class="wrong">It adds coloring to HTML</button>
     <button id="block-12" class="correct">Enhances the pages capabilities</button>
 </div>
-
+</questionBody>
 
 <div id="scores">
     <h1>Your Scores</h1>
@@ -59,8 +55,9 @@
 <input type="text" id="initials" name="initials" placeholder="JD">
     <button id="initials-button">Enter</button>
 
+
 </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src= "answer-checker.js"></script>
-    
 </body>
 </html>

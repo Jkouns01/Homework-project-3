@@ -46,6 +46,24 @@ var question1 = document.getElementById("questionOne");
 var question2 = document.getElementById("questionTwo");
 startButton.addEventListener("click", clickStart)
 
+btn.addEventListener('click', function(){
+    counter++;
+    display.innertext = questions[counter]
+})
+
+var timeLeft = 30;
+var elem = document.getElementById('BodyQuestions');
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+        doSomething();
+    } else {
+        elem.innerHTML = timeLeft + ' seconds remaining';
+        timeLeft--;
+    }
+}
 
 // timer code
 // need to figure out how to show only one question at a time. once answered it will direct you to the next answer//
