@@ -9,7 +9,8 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-   <div id="first-page">
+    
+<div id="first-page">
     <!-- welcomes you to the site. Then pressing 'start' initiates the timer and quiz begins -->
     <div id="start" class="quiz-section">
           <h1>Coding Quiz Challenge</h1>
@@ -18,13 +19,15 @@
           </p>
           <button id="start-button">Start Quiz</button>
    </div>
+</div>
+
    <questionBody>
         <h2 class="question"> </h2>
             <div class="options">
                 <ul>
-                    <button> <options 0=""></options></button>
-                    <button> <options 1=""></options></button>
-                    <button> <options 2=""></options></button>
+                    <button> <options=""></options></button>
+                    <button> <options=""></options></button>
+                    <button> <options=""></options></button>
                 </ul>
             </div>
             <button>Start</button>
@@ -36,16 +39,38 @@
 
 </questionBody>
 
-<div id="scores">
-    <h1>Your Scores</h1>
-    <div> !-- need quiz score to appear here --! 
+<div class="modal-container" id="score-modal">
+
+    <div class="modal-content-container">
+
+        <h1>Congratulations, Quiz Completed.</h1>
+
+        <div class="grade-details">
+            <p>Wrong Answers : <span id="wrong-answers"></span></p>
+            <p>Right Answers : <span id="right-answers"></span></p>
+            <p>Grade : <span id="grade-percentage"></span>%</p>
+            <p ><span id="remarks"></span></p>
+        </div>
+
+        <div>
+            <div>
+                <p>Please give your initials: </p>
+                <input type="text" id="initials" name="initials">
+
+                <a class="dynamic modal-button-container">
+                    <button onclick="download('score', 'text/plain');" id="a">Download</button>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="modal-button-container">
+            <button onclick="closeScoreModal()">Continue</button>
+        </div>
+
     </div>
-    <label for="initials">Initials:</label>
-<input type="text" id="initials" name="initials" placeholder="JD">
-    <button id="initials-button">Enter</button>
-
-
 </div>
+
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src= "answer-checker.js"></script>
 </body>
