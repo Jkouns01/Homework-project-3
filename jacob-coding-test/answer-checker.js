@@ -1,5 +1,5 @@
 //Start
-
+//`
 var questions = [question1, question2, question3, question4]
 var currentQuestion = questions[0]
 var question1 = document.getElementById("questionOne");    
@@ -8,6 +8,10 @@ question1.innerHTML = `<h1>Question One: What is a variable? </h1>
 <button id="block-2" class="wrong">Are placeholders</button>
 <button id="block-3" class="wrong">A number used in math</button>`
 var question2 = document.getElementById("questionTwo");
+question2.innerHTML = `<h1>Question Two: What is not a variable type?</h1>
+<button id="block-4" class="wrong">String</button>
+<button id="block-5" class="correct">Line</dbutton>
+<button id="block-6" class="wrong">Number</button>`
 var question3 = document.getElementById("questionThree");
 var question4 = document.getElementById("questionFour");
 var nextButton = document.getElementById("nextButton");
