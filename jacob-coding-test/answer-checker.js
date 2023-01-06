@@ -1,5 +1,4 @@
 //Start
-var currentQuestion = questions[0]
 var questions = [
     {
         question: "What is a variable?",
@@ -22,24 +21,29 @@ var questions = [
         answer: "Enhances the pages capabilities"
     }
 ]
+var currentQuestion = questions[0];
+console.log(questions);
 
-var nextButton = document.getElementById("nextButton");
-nextButton.addEventListener('click', nextQuestion)
-// clicking start initiation
 function clickStart (){
     startDiv.style.display = "none";
     questions.style.display = "block";
     current = questions[0]
 }
-function nextQuestion(){
+// function nextQuestion(){
+//     for (let i = 0; i< questions.length; i++) {
+        
+//     }
     // add an index to current
-}
 
+console.log('hello')
 var startDiv = document.getElementById("start");
 var startButton = document.getElementById("start-button");
 
 startButton.addEventListener("click", clickStart)
 
+// btn.addEventListener('click', function(){
+//     display.innertext = questions[0]
+// })
 
 var timeLeft = 30;
 var elem = document.getElementById('BodyQuestions');
@@ -50,11 +54,10 @@ function countdown() {
         clearTimeout(timerId);
         doSomething();
     } else {
-        elem.innerHTML = timeLeft + ' seconds remaining';
+        elem = timeLeft + ' seconds remaining';
         timeLeft--;
     }
 }
-
 // timer code
 // need to figure out how to show only one question at a time. once answered it will direct you to the next answer//
 // if answer is correct, add 2 points. else wrong, add 0 points //
