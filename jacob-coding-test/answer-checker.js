@@ -1,57 +1,35 @@
 //Start
 
-var questions = [
-    {
-        question: "What is a variable?",
-        optionA: "Containers for storing data",
-        optionB: "Are placeholders",
-        optionC: "A number used in math",
-        correctOption: "optionA"
-    },
-   
-    {
-        question: "What is not a variable type?",
-        optionA: "String",
-        optionB: "Line",
-        optionC: "Number",
-        correctOption: "optionB"
-    },
-
-    {
-        question:"What is an array?",
-        optionA:"Store multiple values in one variable",
-        optionB: "Same as a method",
-        optionC:"Used to create a list",
-        correctOption: "optionA"
-    },
-
-    {
-        question:"How does JavaScript interact with HTML?",
-        optionA:"It doesn't interact",
-        optionB:"It adds coloring to HTML",
-        optionC:"Enhances the pages capabilities",
-        correctOption: "optionC"
-    }
-]
+var questions = [question1, question2, question3, question4]
+var currentQuestion = questions[0]
+var question1 = document.getElementById("questionOne");    
+question1.innerHTML = `<h1>Question One: What is a variable? </h1>
+<button id="block-1" class="correct">Containers for storing data</button>
+<button id="block-2" class="wrong">Are placeholders</button>
+<button id="block-3" class="wrong">A number used in math</button>`
+var question2 = document.getElementById("questionTwo");
+var question3 = document.getElementById("questionThree");
+var question4 = document.getElementById("questionFour");
+var nextButton = document.getElementById("nextButton");
+nextButton.addEventListener('click', nextQuestion)
 // clicking start initiation
 function clickStart (){
     startDiv.style.display = "none";
     question1.style.display = "block";
+    current = questions[0]
 }
 function nextQuestion(){
-    
+    // add an index to current
 }
 
 var startDiv = document.getElementById("start");
 var startButton = document.getElementById("start-button");
-var question1 = document.getElementById("questionOne");
-var question2 = document.getElementById("questionTwo");
+
 startButton.addEventListener("click", clickStart)
 
-btn.addEventListener('click', function(){
-    counter++;
-    display.innertext = questions[counter]
-})
+// btn.addEventListener('click', function(){
+//     display.innertext = questions[0]
+// })
 
 var timeLeft = 30;
 var elem = document.getElementById('BodyQuestions');
