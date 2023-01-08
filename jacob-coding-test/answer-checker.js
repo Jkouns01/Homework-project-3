@@ -23,6 +23,8 @@ var questions = [
 ]
 var currentQuestion = questions[0];
 console.log(questions)
+
+
 function clickStart (){
     startDiv.style.display = "none";
     questions.style.display = "flex";
