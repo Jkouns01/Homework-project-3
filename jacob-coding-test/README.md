@@ -19,3 +19,40 @@ THEN I can save my initials and score
 <step-4> add javascript to set a timer
 
 <step-5> add css to make it look correct
+
+<!-- console.log(questions);
+
+function clickStart (){
+    startDiv.style.display = "none";
+    questions.style.display = "block";
+    current = questions[0]
+}
+// function nextQuestion(){
+//     for (let i = 0; i< questions.length; i++) {
+        
+//     }
+    // add an index to current
+
+console.log('hello')
+var startDiv = document.getElementById("start");
+var startButton = document.getElementById("start-button");
+
+startButton.addEventListener("click", clickStart)
+
+// btn.addEventListener('click', function(){
+//     display.innertext = questions[0]
+// })
+
+var timeLeft = 30;
+var elem = document.getElementById('BodyQuestions');
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+        doSomething();
+    } else {
+        elem = timeLeft + ' seconds remaining';
+        timeLeft--;
+    }
+} -->
