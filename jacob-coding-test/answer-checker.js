@@ -38,12 +38,13 @@ function nextQuestion(){
     // add an index to current
 
 }
+
 var button1 = document.getElementById('answer-button-1');
 var button2 = document.getElementById('answer-button-2');
 var button3 = document.getElementById('answer-button-3');
-var questionStatement= document.getElementById('question-Statement');
 
-// questionStatement.innerHTML= questions[0]['statement'][0];
+
+
 button1.innerHTML = questions[0]['options'][0];
 button3.innerHTML = questions[0]['options'][1];
 button2.innerHTML = questions[0]['options'][2];
@@ -61,8 +62,8 @@ button3.innerHTML = questions[3]['options'][1];
 button2.innerHTML = questions[3]['options'][2];
 
 
-button1.addEventListener('click', (e) => {
-    userAnswers.push(e.value)
+button1.addEventListener('click', (options) => {
+    userAnswers.push(options.value)
 })
 
 var startDiv = document.getElementById("start");
