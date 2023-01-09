@@ -25,7 +25,13 @@ button{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    
 }
-
+#question-statement{
+    float: inline-start;
+    font: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    position:relative;
+}
 
 #questionOne {
    margin: 20;
@@ -111,6 +117,7 @@ button{
    position:relative;
 
 }
+
 
 #scores{
     display: none;

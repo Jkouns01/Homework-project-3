@@ -1,38 +1,69 @@
 //Start
 var questions = [
     {
-        question: "What is a variable?",
+        statement: "What is a variable?",
         options: ["Containers for storing data", "Are placeholders", "A number used in math"],
         answer:"Containers for storing data"   
     },
     {
-        question:"What is not a variable type?",
+        statement:"What is not a variable type?",
         options:["String", "Line", "Number"],
         answer:"Line",
     },
     {
-        question: "What is an array?",
+        statement: "What is an array?",
         options: ["Store multiple values in one variable", "Same as a method","Used to create a list"],  
         answer: "Store multiple values in one variable "
     },
     {
-        question: "How does JavaScript interact with HTML?",
+        statement: "How does JavaScript interact with HTML?",
         options: ["It doesn't interact","It adds coloring to HTML", "Enhances the pages capabilities"],
         answer: "Enhances the pages capabilities"
     }
 ]
-var currentQuestion = questions[0];
-console.log(questions)
 
+var correctAnswers = ['string'];
+var userAnswers = [];
+var currentQuestion = questions[0];
+var qeustionsPage = document.getElementById('first-page');
+var scoreScreen = document.getElementById('score-modal');
+var questionScreen = document.getElementById('question-page');
+scoreScreen.style.display = 'none';
 function clickStart (){
     startDiv.style.display = "none";
-    questions.style.display = "flex";
     current = questions[0]
+    countdown();
 }
 function nextQuestion(){
     // add an index to current
 
 }
+var button1 = document.getElementById('answer-button-1');
+var button2 = document.getElementById('answer-button-2');
+var button3 = document.getElementById('answer-button-3');
+var questionStatement= document.getElementById('question-Statement');
+
+// questionStatement.innerHTML= questions[0]['statement'][0];
+button1.innerHTML = questions[0]['options'][0];
+button3.innerHTML = questions[0]['options'][1];
+button2.innerHTML = questions[0]['options'][2];
+
+button1.innerHTML = questions[1]['options'][0];
+button3.innerHTML = questions[1]['options'][1];
+button2.innerHTML = questions[1]['options'][2];
+
+button1.innerHTML = questions[2]['options'][0];
+button3.innerHTML = questions[2]['options'][1];
+button2.innerHTML = questions[2]['options'][2];
+
+button1.innerHTML = questions[3]['options'][0];
+button3.innerHTML = questions[3]['options'][1];
+button2.innerHTML = questions[3]['options'][2];
+
+
+button1.addEventListener('click', (e) => {
+    userAnswers.push(e.value)
+})
 
 var startDiv = document.getElementById("start");
 var startButton = document.getElementById("start-button");
@@ -40,21 +71,15 @@ var startButton = document.getElementById("start-button");
 startButton.addEventListener("click", clickStart)
 
 
-var timeLeft = 30;
+var timeLeft = 60;
 var elem = document.getElementById('BodyQuestions');
 var timerId = setInterval(countdown, 1000);
 
 function countdown() {
-    if (timeLeft == -1) {
-        clearTimeout(timerId);
-        doSomething();
-    } else {
-       //elem.innerHTML = timeLeft + ' seconds remaining';
-        timeLeft--;
+    while(timeLeft >= 0) {
+        timeLeft -= 1;
     }
+    qeustionsPage.style.display = "none";
+    scoreScreen.style.display = "block";
+    questionScreen.style.display = "none";
 }
-// Save score
-// timer code
-// need to figure out how to show only one question at a time. once answered it will direct you to the next answer//
-// if answer is correct, add 2 points. else wrong, add 0 points //
-// track every correct answer and save it in local with name option
