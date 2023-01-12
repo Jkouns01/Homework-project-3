@@ -1,4 +1,5 @@
 //Start
+
 var questions = [
     {
         statement: "What is a variable?",
@@ -21,6 +22,8 @@ var questions = [
         answer: "Enhances the pages capabilities"
     }
 ]
+function startGame(){
+
 
 var correctAnswers = ['string'];
 var userAnswers = [];
@@ -43,8 +46,6 @@ var button1 = document.getElementById('answer-button-1');
 var button2 = document.getElementById('answer-button-2');
 var button3 = document.getElementById('answer-button-3');
 
-
-
 button1.innerHTML = questions[0]['options'][0];
 button3.innerHTML = questions[0]['options'][1];
 button2.innerHTML = questions[0]['options'][2];
@@ -62,18 +63,14 @@ button3.innerHTML = questions[3]['options'][1];
 button2.innerHTML = questions[3]['options'][2];
 
 
-button1.addEventListener('click', (options) => {
-    userAnswers.push(options.value)
-})
+button1.addEventListener('click', nextQuestion);
 
 var startDiv = document.getElementById("start");
-var startButton = document.getElementById("start-button");
 
-startButton.addEventListener("click", clickStart)
 
 
 var timeLeft = 60;
-var elem = document.getElementById('BodyQuestions');
+var elem = document.getElementById('questionBody');
 var timerId = setInterval(countdown, 1000);
 
 function countdown() {
@@ -84,3 +81,19 @@ function countdown() {
     scoreScreen.style.display = "block";
     questionScreen.style.display = "none";
 }
+}
+function startQuiz(){
+    displayQuestions()
+}
+function displayQuestions(){
+    console.log('hello world')
+   var questionEl =  document.querySelector('.question');
+   questionEl.textContent = questions[0].statement
+   //display available answers (multiple answers = for loop)
+   // create next question function that alerts user right or wrong answer and pulls up next question
+   //add event listener and classes to questions
+}
+// write a line that can add the class back
+var startButton = document.getElementById("start-button");
+startButton.addEventListener("click", startQuiz);
+//var completedQuiz = document.getElementById("score-modal").classList.remove('remove-display')
